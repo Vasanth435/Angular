@@ -557,41 +557,6 @@
   ],
   "reviews": [
     {
-      "id": 5101,
-      "name": "mohan",
-      "email": "mohan270601@gmail.com",
-      "message": "Instruction is very clear..",
-      "product": "Spring Roll Salad"
-    },
-    {
-      "id": 4682,
-      "name": "mohan",
-      "email": "mohan@gmail.com",
-      "message": "haa haa",
-      "product": "Pancakes "
-    },
-    {
-      "id": 898,
-      "name": "kingkutty",
-      "email": "kingkutty@gmail.com",
-      "message": "nice Instruction",
-      "product": "Garlic-Lime-Shrimp"
-    },
-    {
-      "id": 6997,
-      "name": "mohan",
-      "email": "mohan270601@gmail.com",
-      "message": "good",
-      "product": "Garlic-Lime-Shrimpm"
-    },
-    {
-      "id": 3247,
-      "name": "mohan",
-      "email": "mohan270601@gmail.com",
-      "message": "nice",
-      "product": "Tandoori Lamb Chops"
-    },
-    {
       "id": 3565,
       "name": "vasanth",
       "email": "vasanth12@gmail.com",
@@ -607,18 +572,6 @@
     }
   ],
   "contacts": [
-    {
-      "id": 4717,
-      "name": "mohan",
-      "email": "mohan270601@gmail.com",
-      "message": "thank u so much"
-    },
-    {
-      "id": 632,
-      "name": "mohan",
-      "email": "mohan270601@gmail.com",
-      "message": "thank you "
-    },
     {
       "id": 9799,
       "name": "vasanth",
