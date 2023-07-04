@@ -1,0 +1,70 @@
+<div mat-dialog-title>
+  <h1>Product</h1>
+</div>
+ <form [formGroup]="prodForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+      <div class="row">
+          <mat-form-field appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput type="text" placeholder="" formControlName="Name">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+              <mat-label>Image</mat-label>
+              <input matInput type="text" placeholder="" formControlName="image">
+          </mat-form-field>
+      </div>
+
+      <div class="row">
+          <mat-form-field appearance="outline">
+              <mat-label>Description</mat-label>
+              <input matInput type="text" placeholder="" formControlName="Description">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>INGREDIENTS</mat-label>
+            <textarea matInput type="text" placeholder="" [(ngModel)]="Ingredients" [ngModelOptions]="{standalone:true}"></textarea>
+        </mat-form-field>
+        <!-- <input type="hidden" placeholder="" formControlName="Ingredients"> -->
+       
+          
+      </div>
+
+    
+
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Method</mat-label>
+          <textarea matInput type="text" placeholder="" [(ngModel)]="Method" [ngModelOptions]="{standalone:true}"></textarea>
+      </mat-form-field>
+          <mat-form-field appearance="outline">
+              <mat-label>Recipe Type</mat-label>
+              <mat-select formControlName="type">
+                  <mat-option *ngFor="let val of types" [value]="val">{{val}}
+                  </mat-option>
+              </mat-select>
+          </mat-form-field>
+          
+      </div>
+      <div class="row">
+          
+          <mat-form-field appearance="outline">
+              <mat-label>Nutrition</mat-label>
+              <textarea matInput type="text" placeholder="" [(ngModel)]="nutrition" [ngModelOptions]="{standalone:true}"></textarea>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Cooking Time(In Minutes)</mat-label>
+            <input matInput placeholder="" type="text" formControlName="CookingTime">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Total Calories</mat-label>
+            <input matInput placeholder="" type="text" formControlName="TotalCalories">
+        </mat-form-field>
+      </div>
+  </div>
+
+  <div mat-dialog-actions class="action">
+      <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+      <button mat-raised-button color="primary" type="submit">{{data ? 'Update': 'Save'}}</button>
+  </div>
+</form>

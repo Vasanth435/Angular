@@ -1,0 +1,91 @@
+
+<div class="details">
+
+  <div class="image">
+    <img src="http://localhost/{{product.image}}" />
+  </div>
+
+  <div class="content">
+
+    <div class="tit">
+      <h1 appHover>{{product.Name | uppercase }}</h1>
+    </div>
+
+    <h2 appHover class="desc-title">Description</h2>
+
+    <div>
+      <p style="width: auto;">{{product.Description}}</p>
+    </div>
+
+    
+
+    <div class="row">
+      
+      <div class="recipe-summary-item">
+        <p style="font-size: 15px;" class="value">{{product.CookingTime}}</p>
+        <span style="font-size: 15px;" class="unit">Minutes</span>
+      </div>
+    
+      <div class="recipe-summary-item">
+        <p style="font-size: 15px;" class="value">{{product.TotalCalories}}</p>
+        <span style="font-size: 15px;" class="unit">Calories</span>
+      </div>
+    </div>
+    
+   
+    <hr>
+  
+    <h1 appHover>INGREDIENTS</h1>
+    <div *ngFor="let x of product.Ingredients" style="font-size: 17px;">
+      &#8226;&nbsp;&nbsp;{{x}}
+    </div>
+
+    
+  
+<br><br>
+ 
+
+  <div>
+  <button mat-button [matMenuTriggerFor]="belowMenu">
+    <div style="background: #eae7ca; padding: 2px; font-size:1.5rem;" >View Nutrition</div>
+  </button>
+  <mat-menu #belowMenu="matMenu" yPosition="below">
+    <p>(per serving)</p>
+    <p *ngFor="let x of product.nutrition" >{{x}}</p>
+  </mat-menu>
+  </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="inst">
+  <h1 appHover>Instruction</h1>
+    <div *ngFor="let x of product.Method" style="font-size: 18px;"><br>
+      &#8226;&nbsp;&nbsp;{{x}}
+    </div>
+</div>
+<hr>
+<br><br>
+
+<div class="full">
+  <div class="one">
+    <div class="review">
+      <div class="rev">
+        <app-review [prod] = "product.Name"></app-review>
+      </div>
+    </div>
+  </div>
+
+    <mat-card-content class="txt">
+      <h4 style="color: red;">COMMENTS</h4>
+      <p class="par"  *ngFor="let x of reviews | review : product.Name ">
+        {{x.name | uppercase}} said !!!<br>
+        {{x.message}}
+      </p>  
+      
+    </mat-card-content>
+
+</div>
+<app-footer></app-footer>
+  
